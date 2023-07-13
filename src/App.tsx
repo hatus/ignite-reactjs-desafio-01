@@ -1,5 +1,5 @@
-import { Circle, PlusCircle, Rocket, Trash } from 'lucide-react';
-import styles from './App.module.css';
+import { Circle, PlusCircle, Rocket, Trash } from 'lucide-react'
+import styles from './App.module.css'
 
 function App() {
   return (
@@ -49,7 +49,7 @@ function App() {
         </div>
       </main>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
