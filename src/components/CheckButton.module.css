@@ -1,0 +1,47 @@
+
+.button {
+  display: flex;
+  cursor: pointer;
+  border-radius: 100%;
+  line-height: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: transparent;
+	border: none;
+}
+
+button.unchecked {
+  border: 2px solid var(--blue);
+}
+
+button.unchecked:hover {
+  border: 2px solid var(--blue-dark);
+}
+
+button.unchecked:hover .bg {
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+  outline: 0;
+  border: 0;
+  background-color: var(--blue-dark);
+  opacity: .2;
+  line-height: 0;
+}
+
+
+button.checked .bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--purple-dark);
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+  outline: 0;
+  border: 0;
+}
+
+button.checked:hover .bg {
+  background-color: var(--purple);
+}

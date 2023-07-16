@@ -45,7 +45,7 @@
   color: var(--blue);
 }
 
-.todoListHeader p:nth-child(2) {
+.todoListHeader div:nth-child(2) p {
   color: var(--purple);
 }
 
@@ -80,11 +80,17 @@
   align-items: center;
 }
 
-.todoForm button:hover {
+.todoForm button[type='submit']:not(:disabled):hover {
   background-color: var(--blue);
   border: 1px solid var(--blue);
 
   transition: 0.2s background-color;
+}
+
+
+.todoForm button[type='submit']:disabled {
+	opacity: .7;
+	cursor: not-allowed;
 }
 
 .todoListContent {
@@ -94,53 +100,21 @@
   gap: 0.75rem;
 }
 
-.task {
+.todoListHeaderStatus {
   display: flex;
-  gap: 0.75rem;
-
-  padding: 1rem;
-  width: 100%;
-  border-radius: 0.5rem;
-  border: 1px solid var(--gray-400);
-  background-color: var(--gray-500);
-  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
+  gap: 0.5rem;
 }
 
-.task .titleTask {
-  width: 100%;
-  color: var(--gray-100);
-  font-weight: 400;
-  line-height: 140%;
-  font-size: 0.875rem;
-}
-
-.trashButton {
-  border: 0;
-  background-color: transparent;
-  color: var(--gray-300);
-  cursor: pointer;
-  border-radius: 0.25rem;
-  line-height: 0;
-}
-
-.trashButton:hover {
-  color: var(--danger);
-  background-color: var(--gray-400);
-}
-
-.uncheckedButton {
-  width: 1.5rem;
-  height: 1.5rem;
-  border: 0;
-  background-color: transparent;
-  cursor: pointer;
-  border-radius: 100%;
-  border: 2px solid var(--blue);
-  line-height: 0;
-}
-
-.uncheckedButton:hover {
-  border: 2px solid var(--blue-dark);
-
-  fill-opacity: 0.2;
+.todoListHeaderStatus span {
+  display: flex;
+  padding: 0.125rem 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--gray-200);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 62.4375rem;
+  background: var(--gray-400, #333);
 }

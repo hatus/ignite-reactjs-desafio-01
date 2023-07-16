@@ -1,0 +1,14 @@
+.trashButton {
+  border: 0;
+  background-color: transparent;
+  color: var(--gray-300);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  line-height: 0;
+	padding: .5rem;
+}
+
+.trashButton:hover {
+  color: var(--danger);
+  background-color: var(--gray-400);
+}
